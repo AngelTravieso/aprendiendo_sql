@@ -25,9 +25,10 @@ CREAR TABLA
 */
 
 CREATE TABLE usuarios(
-    id int(11),
-    nombre varchar(100),
-    apellidos varchar(255),
-    email varchar(100),
-    password varchar(255)
-);
+    id int(11) NOT NULL AUTO_INCREMENT,
+    nombre varchar(100) NOT NULL,
+    apellidos varchar(255) DEFAULT 'hola que tal',
+    email varchar(100) NOT NULL,
+    password varchar(255),
+    CONSTRAINT pk_usuarios PRIMARY KEY(id)
+); 

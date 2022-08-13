@@ -39,3 +39,12 @@ CREATE TABLE entradas (
     CONSTRAINT fk_entrada_usuario FOREIGN KEY(`usuario_id`) REFERENCES `usuarios`(`id`),
     CONSTRAINT fk_entrada_categoria FOREIGN KEY(`categoria_id`) REFERENCES `categorias`(`id`)
 ) ENGINE = INNODB;
+
+/*
+    CASCADE
+    ON DELETE
+    ON UPDATE
+    ON DELETE SET NULL
+    ON DELETE SET DEFAULT
+    NO DELETE NO ACTION
+*/

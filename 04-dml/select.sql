@@ -39,3 +39,24 @@ SELECT SQRT(7.91) AS operacion FROM usuarios;
 
 -- TRUNCAR UN NUMERO (QUITAR DECIMALES)
 SELECT TRUNCATE(7.91, 1) AS operacion FROM usuarios;
+
+
+-- FUNCIONES PARA TEXTOS
+
+-- MAYUSCULA
+SELECT UPPER(nombre) FROM usuarios;
+
+-- MINUSCULAS
+SELECT LOWER(nombre) FROM usuarios;
+
+-- CONCATENAR
+SELECT CONCAT(nombre, ' ', apellidos) AS conversion FROM usuarios;
+
+-- FUNCIONES ANIDADAS
+SELECT UPPER(CONCAT(nombre, ' ', apellidos)) AS conversion FROM usuarios;
+
+-- OBTENER LONGITUD
+SELECT email, LENGTH(CONCAT(nombre, ' ', apellidos)) AS conversion FROM usuarios;
+
+-- QUITAR ESPACIOS EN BLANCO
+SELECT TRIM(CONCAT(nombre, '           ', apellidos, '                            ')) AS conversion FROM usuarios;

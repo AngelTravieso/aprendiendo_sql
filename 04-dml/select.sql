@@ -102,3 +102,27 @@ SELECT email, SYSDATE() AS 'hour_so' FROM usuarios;
 
 -- FORMATEAR FECHA
 SELECT email, DATE_FORMAT(fecha_registro, '%d-%m-%y') AS 'hour_so' FROM usuarios;
+
+
+-- FUNCIONES GENERALES
+
+-- VERIFICAR SI UN CAMPO ES NULO
+SELECT email, ISNULL(apellidos) AS 'is_null' FROM usuarios;
+
+-- COMPROBAR SI 2 CAMPOS SON IGUALES
+SELECT email, STRCMP('HOLA', 'HOL1A') AS 'equal' FROM usuarios;
+
+-- VERSION DE MYSQL
+SELECT VERSION();
+
+-- USUARIO DEL SGBD
+SELECT USER();
+
+-- SACAR REGISTROS NO REPETIDOS
+SELECT DISTINCT USER();
+
+-- NOMBRE DE LA BD
+SELECT DATABASE();
+
+-- SI EL CAMPO ESTA NULO, RELLENA CON EL TEXTO
+SELECT IFNULL(apellidos, 'este campo esta vacio') FROM usuarios;

@@ -46,4 +46,15 @@ SELECT email FROM usuarios WHERE apellidos LIKE '%a%' AND password = 'Clave123*'
 SELECT * FROM usuarios WHERE (YEAR(fecha_registro) % 2 = 0);
 
 -- 5. SACAR TODOS LOS REGISTROS DE LA TABLA USUARIOS CUYO NOMBRE TENGA MAS DE 5 LETRAS Y QUE SE HAYAN REGISTRADO ANTES DE 2020, Y MOSTRAR EL NOMBRE EN MAYUS
-SELECT UPPER(nombre) AS nombre, apellidos FROM usuarios WHERE LENGTH(nombre) >= 5 AND YEAR(fecha_registro) < 2022;
+SELECT id, UPPER(nombre) AS nombre, apellidos FROM usuarios WHERE LENGTH(nombre) >= 5 AND YEAR(fecha_registro) < 2022;
+
+-- ORDER CONSULTA (DE MAYOR A MENOR)
+SELECT * FROM usuarios ORDER BY id DESC;
+
+SELECT * FROM usuarios ORDER BY fecha_registro DESC;
+
+-- LIMITAR CANTIDAD DE REGISTROS
+SELECT * FROM usuarios ORDER BY fecha_registro DESC LIMIT 2;
+
+-- LIMITAR CANTIDAD DE REGISTROS (DESDE, HASTA)
+SELECT * FROM usuarios ORDER BY fecha_registro DESC LIMIT 0,2;
